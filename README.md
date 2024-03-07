@@ -1,8 +1,9 @@
 # auto-assign
 
 タスクを自動的に割り振るアプリ
-[フロントエンド](https://github.com/pandaFive/photo-in-frontend)
-[バックエンド](https://github.com/pandaFive/photo-in-backend)
+
+- [フロントエンド](https://github.com/pandaFive/photo-in-frontend)
+- [バックエンド](https://github.com/pandaFive/photo-in-backend)
 
 ## 概要
 
