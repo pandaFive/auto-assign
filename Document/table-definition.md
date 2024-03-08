@@ -139,3 +139,15 @@ NG履歴を管理するテーブル
 | task_id    | タスクID     |     | 〇  | bigint   | 〇       |       |         |
 | created_at | 作成日       |     |     | datetime | 〇       |       |         |
 | updated_at | 更新日       |     |     | datetime | 〇       |       |         |
+
+### 2.12 comments テーブル
+
+タスクに付随するコメントを管理するテーブル
+
+| カラム名    | 意味         | PK  | FK  | データ型 | NOT NULL | INDEX | DEFAULT |
+| ----------- | ------------ | --- | --- | -------- | -------- | ----- | ------- |
+| id          | コメントID   | 〇  |     | bigint   | 〇       | 〇    |         |
+| task_id     | タスクID     |     | 〇  | bigint   | 〇       |       |         |
+| account_id  | アカウントID |     | 〇  | bigint   | 〇       |       |         |
+| created_at  | 作成日       |     |     | datetime | 〇       |       |         |
+| updated_at | 更新日       |     |     | datetime | 〇       |       |         |
