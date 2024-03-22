@@ -30,7 +30,6 @@ ER図
 | id          | タスクID       | 〇  |     | bigint   | 〇       | 〇    |         |
 | title       | タスクタイトル |     |     | string   | 〇       |       |         |
 | area_id     | エリアID       |     | 〇  | bigint   | 〇       |       |         |
-| is_complete | 完了したか     |     |     | boolean  | 〇       |       | false   |
 | created_at  | 作成日         |     |     | datetime | 〇       |       |         |
 | updated_at  | 更新日         |     |     | datetime | 〇       |       |         |
 
@@ -88,23 +87,12 @@ ER図
 | id              | ID                 | 〇  |     | bigint   | 〇       | 〇    |         |
 | account_id      | アカウントID       |     | 〇  | bigint   | 〇       |       |         |
 | assign_cycle_id | アサインサイクルID |     | 〇  | bigint   | 〇       |       |         |
+| ng              | NGされたかどうか   |     |     | boolean  | 〇       | 〇    | false   |
+| completed       | 完了されたかどうか |     |     | boolean  | 〇       | 〇    | false   |
 | created_at      | 作成日             |     |     | datetime | 〇       |       |         |
 | updated_at      | 更新日             |     |     | datetime | 〇       |       |         |
 
-
-### 2.8. ng_history テーブル
-
-NG履歴を管理するテーブル
-
-| カラム名        | 意味               | PK  | FK  | データ型 | NOT NULL | INDEX | DEFAULT |
-| --------------- | ------------------ | --- | --- | -------- | -------- | ----- | ------- |
-| id              | ID                 | 〇  |     | bigint   | 〇       | 〇    |         |
-| account_id      | アカウントID       |     | 〇  | bigint   | 〇       |       |         |
-| assign_cycle_id | アサインサイクルID |     | 〇  | bigint   | 〇       |       |         |
-| created_at      | 作成日             |     |     | datetime | 〇       |       |         |
-| updated_at      | 更新日             |     |     | datetime | 〇       |       |         |
-
-### 2.9. tag_account テーブル
+### 2.8. tag_account テーブル
 
 アカウントが持つタグを設定する,アカウントとタグの中間テーブル
 
@@ -116,7 +104,7 @@ NG履歴を管理するテーブル
 | created_at | 作成日       |     |     | datetime | 〇       |       |         |
 | updated_at | 更新日       |     |     | datetime | 〇       |       |         |
 
-### 2.10 tag_task
+### 2.9. tag_task
 
 タスクが持つタグを設定する,タスクとタグの中間テーブル
 
@@ -128,19 +116,7 @@ NG履歴を管理するテーブル
 | created_at | 作成日   |     |     | datetime | 〇       |       |         |
 | updated_at | 更新日   |     |     | datetime | 〇       |       |         |
 
-### 2.11 completed_tasks テーブル
-
-タスクの完了履歴を管理するテーブル
-
-| カラム名   | 意味         | PK  | FK  | データ型 | NOT NULL | INDEX | DEFAULT |
-| ---------- | ------------ | --- | --- | -------- | -------- | ----- | ------- |
-| id         | ID           | 〇  |     | bigint   | 〇       | 〇    |         |
-| account_id | アカウントID |     | 〇  | bigint   | 〇       |       |         |
-| task_id    | タスクID     |     | 〇  | bigint   | 〇       |       |         |
-| created_at | 作成日       |     |     | datetime | 〇       |       |         |
-| updated_at | 更新日       |     |     | datetime | 〇       |       |         |
-
-### 2.12 comments テーブル
+### 2.10. comments テーブル
 
 タスクに付随するコメントを管理するテーブル
 
@@ -150,4 +126,4 @@ NG履歴を管理するテーブル
 | task_id     | タスクID     |     | 〇  | bigint   | 〇       |       |         |
 | account_id  | アカウントID |     | 〇  | bigint   | 〇       |       |         |
 | created_at  | 作成日       |     |     | datetime | 〇       |       |         |
-| updated_at | 更新日       |     |     | datetime | 〇       |       |         |
+| updated_at  | 更新日       |     |     | datetime | 〇       |       |         |
