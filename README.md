@@ -85,8 +85,10 @@ password
 
 ## ER図
 
-ER図を貼る
+ER図  
+![ER図](./images/er.jpg)
 
 ## インフラ構成図
 
-インフラ構成図を貼る
+インフラ構成図  
+![インフラ構成図](./images//infrastructure.jpg)
