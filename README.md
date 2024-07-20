@@ -11,30 +11,39 @@ https://photo-in-app.com/
 
 ### アドミンアクセス
 
-Account name  
+#### Account name
 管理者
 
-password  
+#### password
 password
 
 ### メンバーアクセス
 
-Account name  
+#### Account name
 鈴木、高木、佐藤　など
 
-password  
+#### password
 password
 
 ## 概要
 
 タスクの概要が書かれたPDFをアップロードすることで、file名に含まれる分類に従ってタスクを自動的に割り振るアプリケーション。
 
+## 開発のきっかけ・背景
+
+&emsp;1日に数十件の撮影タスクを、単純な条件に基づいて数人のスタッフに割り振る作業があります。この作業は、スタッフごとのキャパシティや撮影可能なエリア、物件の属性などいくつかの条件を参考にして割り振り先を決めていました。また、割り振りと記録の作業は別々に行われていたため、記録漏れや記録の誤りが発生するリスクがありました。1日に数十件を処理するこの一連の作業は煩雑であり、改善の余地がありました。  
+&emsp;そこで、単純な条件を組み合わせて複数の処理を高速に行い、記録を自動的に保存するこの作業はコンピューターに任せるのが最適だと判断し、本アプリを作成しました。
+
+## ユーザーの課題
+
+- 1日20件～30件のタスクを条件ごとに個別に割り振る苦労
+- 記録が手作業であり、記録漏れや記録の誤りが起こりやすい
+
 ## 使用技術
 
 - Frontend: Next.js (eslint/prettier)
 - Backend: Ruby on Rails (API mode/Rspec/rubocop ) + Nginx
-- Infrastructure:
-    AWS (Amplify/ECS Fargate/ECR/RDS/ALB/Route53), Docker & docker-compose & Dev Container
+- Infrastructure: AWS (Amplify/ECS Fargate/ECR/RDS/ALB/Route53), Docker & docker-compose & Dev Container
 - Database: PostgreSQL
 
 ### 使用言語
