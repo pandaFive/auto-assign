@@ -84,9 +84,10 @@ password
   - Other
     - ACM
 
-### CI
+### CI/CD
 
 - GitHub Actions
+- AWS Amplifyによる自動デプロイ
 
 ### Others
 
